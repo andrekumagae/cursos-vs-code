@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    div{
+        border: 1px solid #000;
+        padding: 10px;
+        display: inline-block;
+    }
+
+    .quadro{
+        background-color: #ddd;
+    }
+</style>
+
+</head>
+<body>
+    <h1 class="titulo">Título</h1>
+    <h2>Sub-titulo</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores eveniet odit blanditiis? Sed modi unde obcaecati voluptate, alias adipisci nam velit quae dolorem dolor maiores ad accusamus fuga corporis voluptas.</p>
+    <p class="titulo">Teste 2</p>
+    <div class="quadro">
+        <span>Span</span>
+        <p>parágrafo</p>
+        <span>Span</span>
+    </div>
+
+    <div>
+        <span>Span</span>
+        <p>parágrafo</p>
+        <span>Span</span>
+    </div>
+    <hr>
+    <script>
+        //É possível alterar estilo pela classe
+        var vermelho = document.querySelectorAll(".titulo");
+        vermelho[1].style.color="#f00"
+        vermelho[0].style.color="#00f"
+        //Ou pelo nome da tag
+        var novoTexto = document.querySelectorAll("p");
+        novoTexto[0].innerText = "NOVO TEXTO"
+        novoTexto[1].style.textDecoration = "underline"
+        for (let i = 0; i < vermelho.length; i++) {
+           document.write(vermelho[i].innerHTML+"<br>")
+            
+        }
+        //Também é possível definir pela tag dentro de outra tag ou classe
+        var verde = document.querySelectorAll("div.quadro > p")
+        for (let i = 0; i < verde.length; i++) {
+            verde[i].style.color="#0a0";
+        }
+        //Podemos usar variáveis para definir qual será estilizada
+        var titulos = "h1, h2"
+        var laranja = document.querySelectorAll(titulos)
+        for (let i = 0; i < laranja.length; i++) {
+            laranja[i].style.color="#ffa500";
+        }
+
+    </script>
+</body>
+</html>

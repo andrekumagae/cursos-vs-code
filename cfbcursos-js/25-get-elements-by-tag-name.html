@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>CFB cursos</p>
+    <p>Curso de Javascript</p>
+    <p>Aula 25</p>
+    <p>www.youtube.com/cfbcursos</p>
+    <p>cfbcursos.com.br</p>
+    <span>Teste</span>
+    <hr>
+
+    <script>
+        //Pegando ou editando valores pelo nome da tag
+        var tagsP = document.getElementsByTagName("p");
+        //use o innetHTML através do índice do vetor
+        document.write(tagsP[2].innerHTML)
+        tagsP[3].style.color="#f00"
+        var negrito = document.getElementsByTagName("span");
+        negrito[0].style.fontWeight = "bold";
+        var nomeTags=document.getElementsByTagName("*")
+        var numero = 0;
+        var pulaLinha = document.write("<br>")
+    </script>
+</body>
+</html>

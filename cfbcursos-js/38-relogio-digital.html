@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #rel{
+            text-align: center;
+            color:#0f0;
+            font-weight: bold;
+            font-size: 30px;
+            width: 130px;
+            background-color: #000;
+        }
+    </style>
+    <script>
+        function relogio() {
+            var data = new Date();
+            var hora = data.getHours();
+            var minutos = data.getMinutes();
+            var segundos = data.getSeconds();
+            
+            if (hora<10) hora="0"+hora;
+            if (minutos < 10) minutos = "0" + minutos;
+            if (segundos<10) segundos="0"+segundos;
+            var horas = hora + ":" + minutos + ":" + segundos;
+            document.getElementById("rel").value = horas;
+        }
+        var tempo = setInterval(relogio, 1000);
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="rel">
+</body>
+
+</html>

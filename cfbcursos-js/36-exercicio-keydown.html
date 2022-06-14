@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #dv1 {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+            /* Sem essa propriedade não funciona */
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+    </style>
+    <script>
+        var px = 0;
+        var py = 0;
+        var obj = document.getElementById("dv1");
+        
+        function iniciar(){
+            document.getElementById("dv1").addEventListener("click",ativaClick);
+        }
+        
+        
+        function ativaClick(){
+            var obj = document.getElementById("dv1");
+            obj.style.backgroundColor="#f00";
+            document.addEventListener("keydown", move)
+        }
+        
+        
+        function move() {
+            var obj = document.getElementById("dv1");
+            var tecla = event.keyCode;
+            var velocidade = 100;
+            if (tecla == 37) {
+                px -= velocidade;
+                obj.style.left = px + "px";
+            } else if (tecla == 38) {
+                py -= velocidade;
+                obj.style.top = py + "px";
+            } else if (tecla == 39) {
+                px += velocidade;
+                obj.style.left = px + "px";
+            } else if (tecla == 40) {
+                py += velocidade;
+                obj.style.top = py + "px";
+            } else if (tecla == 13) {
+                alert("Evento keydown removido.")
+                //removendo a função apertando a tecla enter
+                this.removeEventListener("keydown", move);
+                obj.style.backgroundColor="#fff";
+            }
+        }
+        window.addEventListener("load", iniciar);
+    </script>
+</head>
+
+<body>
+    <div id="dv1"></div>
+</body>
+
+</html>

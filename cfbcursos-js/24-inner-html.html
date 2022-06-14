@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="texto">CFB cursos</p>
+    <input type="text" id="cxtexto" value="CFB cursos">
+    <script>
+        //É possível atribuir variável e mudar propriedades junto
+        var cxt = document.getElementById("cxtexto").value = "Curso de JS";
+        //alert(cxt);
+        //Quando uma tag não possui a propriedade id, use o comando innerHTML
+        var paragrafo=document.getElementById("texto").innerHTML="Aula 24 - Inner HTML";
+
+    </script>
+</body>
+
+</html>

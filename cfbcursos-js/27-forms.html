@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label, input{
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form name="curso1" id="curso1" action="#" method="post">
+        <label for="teste">Nome</label>
+        <input type="text" name="fNome" id="teste" value="Primeiro - 1">
+        <label for="testeSenha">Senha</label>
+        <input type="password" name="fSenha" id="testeSenha" value="123">
+        <input type="submit" name="btEnviar" value="Enviar">
+    </form>
+    <form name="curso1" id="curso2" action="#" method="post">
+        <label>Nome</label>
+        <input type="text" name="fNome" id="teste2" value="Segundo - 2">
+        <label>Senha</label>
+        <input type="password" name="fSenha" value="123">
+        <input type="submit" name="btEnviar" value="Enviar">
+    </form>
+    <hr>
+    <script>
+        var fm=document.forms.length
+        document.write(fm)
+        document.write("<br>"+document.forms[0].id)
+        document.write("<br>"+document.forms.item(1).id)
+        document.write("<br>"+document.forms.namedItem("curso1").id)
+        document.write("<br>"+document.forms.namedItem("curso1").innerHTML)
+        document.write("<br>"+document.forms["curso1"].elements[0].value)
+
+        var form=document.forms[0];
+        var el=form.elements;
+
+        for (let i = 0; i < el.length-1; i++) {
+            el[i].style.backgroundColor="#ddd";
+            el[i].value="CFBcursos";
+        }
+        document.write("<br>"+document.getElementById("curso2").elements[1].value)
+
+
+    </script>
+</body>
+</html>

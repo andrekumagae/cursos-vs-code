@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #dv1 {
+        background-color: #fff;
+        border: 1px solid #000;
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+    }
+</style>
+<script>
+    var dx, dy, px, py, vel, obj, tmp;
+    function inicia() {
+        dx = dy = px = py = 0;
+        vel = 10; //velocidade da div
+        obj = document.getElementById("dv1");
+        document.addEventListener("keydown", teclaDw)
+        document.addEventListener("keyup", teclaUp)
+        tmp = setInterval(enterFrame, 20); //controla amovimentação pela velocidade e taxa de frames
+    }
+
+    function teclaDw() {
+        //variavel que define a posição baseado nas teclas de seta pressionadas
+        var tecla = event.keyCode;
+        if (tecla == 37) dx = -1; //left
+        else if (tecla == 38) dy = -1; //up
+        else if (tecla == 39) dx = 1; //right
+        else if (tecla == 40) dy = 1; //down
+    }
+
+    function teclaUp() {
+        var tecla = event.keyCode;
+        if (tecla == 37 || tecla == 39) dx = 0;
+        else if (tecla == 38 || tecla == 40) dy = 0;
+    }
+
+    function enterFrame() {
+        //fórmula que multiplica a posição do eixo px e py pela velocidade
+        px += dx * vel;
+        py += dy * vel;
+        obj.style.left=px+"px";
+        obj.style.top=py+"px";
+    }
+
+    window.addEventListener("load", inicia);
+
+
+
+</script>
+
+<body>
+    <div id="dv1"></div>
+
+</body>
+
+</html>

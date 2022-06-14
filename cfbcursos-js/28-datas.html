@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        document.write(Date());
+        var dt = new Date();
+        var ndt = new Date();
+        ndt.setDate(dt.getDate() + 2)
+        function mudaDatas(dt) {
+            var dia = dt.getDate();
+            var diaSem = dt.getDay();
+            var mes = dt.getMonth();
+            var ano = dt.getFullYear();
+            var horas = dt.getHours();
+            var minutos = dt.getMinutes();
+            var segundos = dt.getSeconds();
+            var nomeMeses = new Array("janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro")
+            var nomeSemana = new Array("Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sabado")
+
+
+            document.write("<br>"+nomeSemana[diaSem] + ", " +
+                dia + " de " +
+                nomeMeses[mes] + " " +
+                "de " + ano + " às " +
+                horas + ":" + minutos + ":" + segundos
+                )
+        }
+        mudaDatas(dt);
+        mudaDatas(ndt);
+        ndt.setFullYear(dt.getFullYear() + 2)
+        mudaDatas(ndt);
+        var nsc = new Date(1990,03,14)
+        mudaDatas(nsc)
+
+    </script>
+</body>
+
+</html>
