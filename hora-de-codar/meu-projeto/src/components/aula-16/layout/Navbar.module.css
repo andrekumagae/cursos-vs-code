@@ -1,0 +1,10 @@
+.list{
+    /* Mudar de block para flex para deixar a navbar lado a lado */
+    display: flex;
+    list-style: none;
+}
+
+.item{
+    /* Espaçamento entre links da navbar */
+    margin-right: 1em;
+}

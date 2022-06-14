@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do dia</title>
+    <!-- Para criar arquivo que não existe, clique + espaço no nome do arquivo css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- onload = Ao carregar o body, chamar a função "Carregar()" -->
+<body onload="carregar()"> 
+    <header>
+        <h1>Hora do dia</h1>
+    </header>
+    <section>
+        <div id="msg">
+            <!-- Mensagem que irá mudar de acordo com a hora -->
+            Aqui vai aparecer a mensagem...
+        </div>
+        <div>
+            <!-- Imagens com id que vou utilizar no código js -->
+            <img id="imagem" src="manha.png" alt="Foto do dia">
+            <!-- Saudação que irá mudar de acordo com a hora -->
+            <p id="saudacao"></p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+    <!-- A dica de criação de arquivo funciona com js tbm -->
+    <script src="script.js"></script>
+</body>
+</html>

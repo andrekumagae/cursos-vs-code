@@ -1,0 +1,11 @@
+/* Importante usar camel case sem traços para trabalhar com css no react */
+.fraseContainer{
+    background-color: #333;
+    border: 1px solid #111;
+}
+
+.fraseContent{
+    color: #fff;
+    background-color: #333;
+    margin: 0;
+}
