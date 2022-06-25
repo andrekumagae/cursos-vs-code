@@ -18,13 +18,13 @@ Permite encaixar os itens em uma div:
 
 Sem display:flex:
 
-![image-20220622093329940](C:\Users\andre\AppData\Roaming\Typora\typora-user-images\image-20220622093329940.png)
+<img src="img/sem-display-flex.png">
 
 
 
 Com display:flex:
 
-![image-20220622093301538](C:\Users\andre\AppData\Roaming\Typora\typora-user-images\image-20220622093301538.png)
+<img src="img/com-display-flex.png">
 
 ### Flex-direction
 
@@ -32,7 +32,7 @@ Informa a direção dos elementos, podendo ser em linha (row) ou coluna (column)
 
 Exemplos abaixo das propriedades row, row-reverse, column e column-reverse.
 
-![image-20220625081629102](C:\Users\andre\AppData\Roaming\Typora\typora-user-images\image-20220625081629102.png)
+<img src="img/flex-direction.png">
 
 ### Flex-wrap
 
@@ -40,9 +40,9 @@ Opção de quebra de itens quando chegar nas medidas de altura  (min-height) par
 
 Comportamento para linhas:
 
-![image-20220625081922746](C:\Users\andre\AppData\Roaming\Typora\typora-user-images\image-20220625081922746.png)
+<img src="img/flex-wrap-row.png">
 
 Comportamento para colunas:
 
-![image-20220625082001651](C:\Users\andre\AppData\Roaming\Typora\typora-user-images\image-20220625082001651.png)
+<img src="img/flex-wrap-column.png">
 
