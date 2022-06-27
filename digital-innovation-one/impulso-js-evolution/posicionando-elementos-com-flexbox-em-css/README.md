@@ -54,7 +54,7 @@ Ordem da linha natural da esquerda para a direita e com quebra de cima para baix
 
 <img src="./img/row-wrap.png">
 
-### wrap reverse
+### row wrap reverse
 
 Inverte o row wrap deixando a quebra de baixo para cima.
 
@@ -79,3 +79,27 @@ Inverte o row e o wrap, deixando a direção da linha da direita para a esquerda
 <img src="./img/row-reverse-wrap-reverse.png">
 
 Pode ser usada com column também.
+
+## Justify content
+
+Propriedade para alinhar itens dentro de um container desde que não estejam ocupando 100% do espaço.
+
+### flex-start
+
+Alinham no ínicio do container.
+
+### flex-end
+
+Alinham no final do container.
+
+### center
+
+Alinham no centro do container.
+
+### space-between
+
+Cria um espaçamento igual entre os elementos.
+
+### space-around
+
+O espaçamento do meio é duas vezes maior que o do início e do final.
