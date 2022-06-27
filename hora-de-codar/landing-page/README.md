@@ -13,3 +13,7 @@ Link do vídeo: [CRIE UMA LANDING PAGE COM HTML CSS E RESPONSIVIDADE](https://ww
 ### Ícones
 
 * [Bootstrap Icons](https://icons.getbootstrap.com/#install)
+
+### Formulário
+
+Informações sobre o evento e preenchimento de dados na parte superior com uma imagem transparante ao fundo.

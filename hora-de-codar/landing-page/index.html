@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <header id="event-description">
+    <div id="event-description">
         <div id="disclaimer">
             <h2>Empresa</h2>
             <p class="about-event">
@@ -28,13 +28,35 @@
             <p>Data do evento:</p>
             <p class="event-date">Segunda, 18 de Julho, a partir das 20:00</p>
         </div>
-        <div id="subscription-form"></div>
-        <p>Preencha o formulário para receber os detalhes do evento</p>
-        <div class="form-group">
-            <label for="name">Nome</label>
-            <input type="text" name="name" placeholder="Digite o seu nome">
+        <div id="subscription-form">
+            <p>Preencha o formulário para receber os detalhes do evento</p>
+            <form>
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" name="name" placeholder="Digite o seu nome">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" placeholder="Digite o seu e-mail">
+                </div>
+                <div class="form-group">
+                    <label for="phone">E-mail</label>
+                    <input type="phone" name="phone" placeholder="Número de WhatsApp">
+                </div>
+                <div class="form-group">
+                    <label for="interest">Principal interesse</label>
+                    <select name="interest" id="">
+                        <option value="" disabled selected>Selecione</option>
+                        <option value="apartment">Apartamentos</option>
+                        <option value="house">Casas</option>
+                        <option value="garden">Jardins</option>
+                        <option value="other">Outros</option>
+                    </select>
+                </div>
+                <input type="submit" class="btn" value="Quero me inscrever">
+            </form>
+            </header>
         </div>
-    </header>
 </body>
 
 </html>
