@@ -103,3 +103,13 @@ Cria um espaçamento igual entre os elementos.
 ### space-around
 
 O espaçamento do meio é duas vezes maior que o do início e do final.
+
+### Exemplos
+
+<img src="./img/justify-content.png">
+
+## Align items
+
+Diferente do justify-content que trata do espaçamento entre os elementos, a propriedade align-items cuida do alinhamento no eixo vertical.
+
+<img src="./img/align-items.png">
