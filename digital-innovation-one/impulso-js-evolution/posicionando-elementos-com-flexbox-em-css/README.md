@@ -119,3 +119,13 @@ Diferente do justify-content que trata do espaçamento entre os elementos, a pro
 Parecido com o align-item, porém ele alinha o conteúdo como um todo.
 
 <img src="./img/align-content.png">
+
+## Flex-grow
+
+Define a proporcionalidade de crescimento dos itens, respeitando o tamanho de seus conteúdos internos. Não é compatível junto com justify-content.
+
+<img src="./img/flex-grow.png">
+
+## Flex-basis
+
+É a propriedade que estabelece o tamanho incial do item antes da distribuição de espaço restante dentro dele usando como base o conteúdo interno disposto.
