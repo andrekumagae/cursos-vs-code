@@ -7,13 +7,71 @@
     <title>Fundamentos - flex-basis</title>
     <style>
         .container{
-            max-width: 300px;
+            max-width: 500px;
             display: flex;
             border: 1px solid black;
         }
+
+        .item{
+            margin: 5px;
+            background-color: coral;
+            color: white;
+            text-align: center;
+        }
+
+        .basis-auto{
+            flex-basis: auto;
+        }
+
+        .basis-zero{
+            flex-basis: 0;
+        }
+
+        .fg-0{
+            flex-grow: 0;
+        }
+        .fg-1{
+            flex-grow: 1;
+        }
+
+        .fg-2{
+            flex-grow: 2;
+        }
+
+        .w100{
+            flex-basis: 100px;
+        }
+
     </style>
 </head>
 <body>
-    
+    <h2>Sem flex basis</h2>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">BBB</div>
+        <div class="item">C</div>
+        <div class="item">DEF</div>
+    </div>
+    <h2>Basis auto</h2>
+    <div class="container">
+        <div class="item basis-auto fg-1">AAAAAAAAA</div>
+        <div class="item basis-auto fg-1">BBB</div>
+        <div class="item basis-auto fg-1">C</div>
+        <div class="item basis-auto fg-1">DEF</div>
+    </div>
+    <h2>Basis zero</h2>
+    <div class="container">
+        <div class="item basis-zero fg-1">A</div>
+        <div class="item basis-zero fg-2">B</div>
+        <div class="item basis-zero fg-1">C</div>
+        <div class="item basis-zero fg-1">DEF</div>
+    </div>
+    <h2>Basis + width</h2>
+    <div class="container">
+        <div class="item w100">AAAAAAAAA</div>
+        <div class="item w100">BBB</div>
+        <div class="item w100">C</div>
+        <div class="item w100">DEF</div>
+    </div>
 </body>
 </html>

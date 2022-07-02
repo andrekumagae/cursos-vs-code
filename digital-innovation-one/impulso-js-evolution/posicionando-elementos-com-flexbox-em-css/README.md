@@ -129,3 +129,30 @@ Define a proporcionalidade de crescimento dos itens, respeitando o tamanho de se
 ## Flex-basis
 
 É a propriedade que estabelece o tamanho incial do item antes da distribuição de espaço restante dentro dele usando como base o conteúdo interno disposto.
+
+Perceba uma div o comportamento em 4 divs.
+
+### Sem flex-basis
+
+<img src="./img/sem-flex-basis.png">
+
+### Com flex-basis auto
+
+<img src="./img/flex-basis-auto.png">
+
+Com a flex-basis que por padrão já tem o valor auto, nós controlamos a proporção que cada elemento terá em relação ao espaço. Ele vai ajustar o conteúdo mantendo as propriedades dele e o expandindo, se necessário.
+
+Perceba quando inserimos o valor 0 na flex-basis, o conteúdo não se ajusta automaticamente, pois esta propriedade faz com que todos os elementos respeitam a mesma proporção.
+
+<img src="./img/flex-basis-zero.png">
+
+Podemos informar também a largura padrão dos elementos, como por exemplo abaixo a 100px. Perceba que ficou uma "folga" do container pois como informamos que cada item deve ter 100px, ele não vai se ajustar como nos outros exemplos.
+
+<img src="./img/flex-basis-com-width.png">
+
+## Flex-grow
+
+A propriedade flex-grow faz com que mesmo que os itens contenham a mesma quantidade de caracteres, priorizamos que um deles tenha um tamanho maior no container. Pereceba quando aplicamos um flex-grow: 2 no segundo item. Ele ocupa o dobro do tamanho dos demais.
+
+<img src="./img/flex-grow-2.png">
+
