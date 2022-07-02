@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #dvslider {
+            width: 900px;
+            height: 600px;
+            border: 1px solid #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btSlider{
+            background-color: rgba(0, 0, 0, .4);
+            height: 30%;
+            color: white;
+            cursor: pointer;
+            /* Sumir a borda quando clicar */
+            outline: none;
+            margin: 10px;
+            border: none;
+        }
+
+        #dvLoad{
+            width: 100%;
+            height: 5px;
+            margin-top: 25%;
+            border: 1px solid rgba(255, 255, 255, .3);
+        }
+        #dvBarra{
+            width: 0%;
+            height: 100%;
+            background-color: #fff;
+
+        }
+    </style>
+    <script>
+        var vetorImagens = []
+        var slider;
+        var imagemAtual;
+        var máximoDeImagens;
+        var tempoDasImagens
+        var vTempo;
+        var vLoad;
+        // função para carregar as imagens na página
+        function preCarregamento() {
+            var numeroImagem = 1;
+            for (let index = 0; index < 4; index++) {
+                vetorImagens[index] = new Image();
+                vetorImagens[index].src = "imgs/s" + numeroImagem + ".jpg";
+                numeroImagem++;
+            }
+        }
+
+        function carregaImagens(imagem) {
+            slider.style.backgroundImage = "url('" + vetorImagens[imagem].src + "')"
+        }
+
+        function inicia() {
+            preCarregamento();
+            imagemAtual = 0;
+            máximoDeImagens = vetorImagens.length-1;
+            slider = document.getElementById("dvslider");
+            carregaImagens(imagemAtual);
+            tempoTroca=0;
+        }
+
+        function troca(dir){
+            tempoTroca=0;
+            imagemAtual+=dir;
+            if (imagemAtual>máximoDeImagens) {
+                imagemAtual=0;
+            }
+            carregaImagens(imagemAtual);
+        }
+
+        window.addEventListener("load", inicia);
+    </script>
+</head>
+
+<body>
+    <div id="dvslider">
+        <button class="btSlider">Anterior</button>
+        <div id="dvLoad">
+            <div id="dvBarra"></div>
+        </div>
+        <button class="btSlider">Próximo</button>
+    </div>
+</body>
+
+</html>
