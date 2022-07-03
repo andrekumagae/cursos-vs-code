@@ -2,17 +2,30 @@
 
 Projeto que aprendo a criar um menu de café pelo site freecodecamp.org.
 
-## Menu principal
+<img src="./img/camper-cafe.png">
 
-Criado em uma div onde utilizei as seguintes propriedades:
+## Dicas que aprendi neste curso
 
 ````html
-background-color: burlywood;
-/* Cobre 80% do tamanho de seu elemento-pai, que é o body */
-width: 80%;
-/* Propriedades para centralizá-la na margem esquerda e direita */
-margin-left: auto;
-margin-right: auto;
+.menu{
+    background-color: burlywood;
+    width: 80%;
+/* Propriedades para centralizá-la na margem esquerda e direita e limitar a 500px de largura
+	para resoluções maiores não esticarem a div*/
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+
+img{
+/* Fazer com a img tenha o mesmo comportamento do header */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+/* usar margin negativa para subir o seu elemento */
+    margin-top: -25px;;
+}
 ````
 
-Boa dica passada para alinhar dois elementos em 50% é deixá-los na mesma linha, senão automaticamente a página joga o segundo para a próxima linha.
