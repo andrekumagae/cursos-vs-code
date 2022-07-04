@@ -156,3 +156,56 @@ A propriedade flex-grow faz com que mesmo que os itens contenham a mesma quantid
 
 <img src="./img/flex-grow-2.png">
 
+## Flex-shrink
+
+Pense como o inverso do grow, onde vamos comprimir os elementos de um container. Ele vai se adaptar e se houver quebra de linha, aumenta a altura automaticamente.
+
+<img src="flex-shrink.png">
+
+Caso deixamos o valor como zero, os itens irão vazar do container.
+
+<img src="flex-shrink.zero.png">
+
+## Flex (Shorthand)
+
+Podemos utilizar o shorthand **flex** para usar as propriedades flex-grow, flex-basis e flex-shrink em uma declaração só.
+
+Funciona da seguinte forma:
+
+```html
+        .flex-1{
+            /* grow = 1, shrink = 1, basis = 0 */
+            flex: 1;
+        }
+
+        .flex-2{
+            /* grow = 2, shrink = 1, basis = 0 */
+            flex: 2;
+        }
+```
+
+## Order
+
+Propriedade para ordenar elementos do container.
+
+Por padrão, o valor de order é 0.
+
+Porém, se criamos os seguintes estilos, a ordenação muda:
+
+````html
+    <div class="flex-container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+    <h2>Order: diferentes</h2>
+    <div class="flex-container">
+        <div class="item order2">1</div>
+        <div class="item order1">2</div>
+        <div class="item order3">3</div>
+        <div class="item order2">4</div>
+    </div>
+````
+
+<img src="./img/order.png">

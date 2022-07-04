@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Flex</title>
+    <style>
+        .flex-container {
+            display: flex;
+            border: 1px solid black;
+            max-width: 400px;
+            margin-bottom: 10px;
+        }
+        .item {
+            background-color: brown;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .flex-1{
+            /* grow = 1, shrink = 1, basis = 0 */
+            flex: 1;
+        }
+
+        .flex-2{
+            /* grow = 2, shrink = 1, basis = 0 */
+            flex: 2;
+        }
+
+        .largura{
+            /* Com shorthand flex e basis 0, ele ignora a propriedade width */
+            width: 200px;
+            /* Agora se eu der um min-width, ele vai tentar atender esta propriedade */
+            /* min-width: 250px; */
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex: 1</h1>
+    <div class="flex-container">
+        <div class="item flex-1">A</div>
+        <div class="item flex-1">BBBBBBBBBBBBBBBBB</div>
+        <div class="item flex-1">C</div>
+        <div class="item flex-1">D</div>
+        <div class="item flex-1">EF</div>
+    </div>
+    <h1>Flex: 2</h1>
+    <div class="flex-container">
+        <div class="item flex-1">A</div>
+        <div class="item flex-2">BBBB</div>
+        <div class="item flex-2">C</div>
+        <div class="item flex-1">D</div>
+        <div class="item flex-1">EF</div>
+    </div>
+    <h1>Largura ignorada</h1>
+    <div class="flex-container">
+        <div class="item flex-1 largura">A</div>
+        <div class="item flex-2 largura">BBBB</div>
+        <div class="item flex-2 largura">C</div>
+        <div class="item flex-1 largura">D</div>
+        <div class="item flex-1 largura">EF</div>
+    </div>
+</body>
+</html>
