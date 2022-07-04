@@ -209,3 +209,12 @@ Porém, se criamos os seguintes estilos, a ordenação muda:
 ````
 
 <img src="./img/order.png">
+
+## Align-self
+
+Parecido com o funcionamento do justify-content, porém aqui alinhamos individualmente os itens em um eixo veritcal para row e horizontal para column.
+
+<img src="./img/align-self-row.png ">
+
+<img src="./img/align-self-column.png">
+
