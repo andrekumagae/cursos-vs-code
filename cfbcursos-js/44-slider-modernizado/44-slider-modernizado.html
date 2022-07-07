@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #dvslider {
+        #dvSlider {
             width: 900px;
             height: 600px;
             border: 1px solid #000;
@@ -45,9 +45,9 @@
         var slider;
         var imagemAtual;
         var máximoDeImagens;
-        var tempoDasImagens
-        var vTempo;
-        var vLoad;
+        var tempoDeCarregamento;
+        var statusBarra;
+        var tempoTroca=0;
         // função para carregar as imagens na página
         function preCarregamento() {
             var numeroImagem = 1;
@@ -66,9 +66,12 @@
             preCarregamento();
             imagemAtual = 0;
             máximoDeImagens = vetorImagens.length-1;
-            slider = document.getElementById("dvslider");
+            slider = document.getElementById("dvSlider");
+            statusBarra = document.getElementById("dvBarra");
             carregaImagens(imagemAtual);
-            tempoTroca=0;
+
+            // tempoTroca=0;
+            anima();
         }
 
         function troca(dir){
@@ -76,8 +79,21 @@
             imagemAtual+=dir;
             if (imagemAtual>máximoDeImagens) {
                 imagemAtual=0;
+            }else if(imagemAtual < 0){
+                imagemAtual=máximoDeImagens;
             }
             carregaImagens(imagemAtual);
+        }
+
+        function anima(){
+            tempoTroca++;
+            if (tempoTroca >= 500) {
+                tempoTroca=0;
+                troca(1);
+            }
+            tempoDeCarregamento = tempoTroca/5;
+            statusBarra.style.width=tempoDeCarregamento+"%";
+            window.requestAnimationFrame(anima);
         }
 
         window.addEventListener("load", inicia);
@@ -85,12 +101,12 @@
 </head>
 
 <body>
-    <div id="dvslider">
-        <button class="btSlider">Anterior</button>
+    <div id="dvSlider">
+        <button class="btSlider" onclick="troca(-1)">Anterior</button>
         <div id="dvLoad">
             <div id="dvBarra"></div>
         </div>
-        <button class="btSlider">Próximo</button>
+        <button class="btSlider" onclick="troca(1)">Próximo</button>
     </div>
 </body>
 
