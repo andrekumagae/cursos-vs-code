@@ -72,7 +72,7 @@ header .item-list {
     margin: 10px;
 }
 
-.texto-apresentacao a{
+.btn{
     background-color: var(--destaque);
     color: #fff;
     text-align: center;
@@ -132,16 +132,87 @@ header .item-list {
 #servicos h2{
     color: #fff;
     font-size: 32px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .service-list{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
-.service-item{
+.service-list .service-item{
     text-align: center;
 }
 
-/* Parei nos 06:58 */
+.service-item a{
+    width: 220px;
+    background-color: #fff;
+    border-radius:30px;
+    height: 50px;
+    text-align: center;
+    margin-top: 20px;
+    line-height: 50px;
+    padding: 5px 10px;
+    color: var(--destaque);
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.service-item p{
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.service-item img{
+    width: 80%;
+    /* com a diminuição de tamanho, as imagens são jogadas pra esquerda. Essa propriedae as centraliza */
+    margin: auto;
+}
+
+#planos{
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.plan-list{
+    display: flex;
+    /* Faz com que alinhei de baixo pra cima, fazendo esse efeito de escada */
+    align-items: flex-end;
+}
+
+.plan-item{
+    flex: 1;
+    border: 5px solid var(--destaque);
+    margin-right: 20px;
+    padding: 10px;
+}
+
+.plan-item .btn{
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.plan-item h3{
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.plan-item h3::after{
+    content: "";
+    background-color: var(--destaque);
+    width: 100%;
+    height: 3px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.plan-item ul{
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+}
