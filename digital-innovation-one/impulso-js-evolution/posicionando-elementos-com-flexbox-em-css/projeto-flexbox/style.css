@@ -28,6 +28,7 @@ div img{
     max-width: 992px;
     margin: auto;
     width: 100%;
+    min-width: 320px;
 }
 
 header{
@@ -62,8 +63,9 @@ header .item-list {
     justify-content: space-between;
 }
 
-.texto-apresentacao{
+.apresentacao .texto-apresentacao{
     min-height: 200px;
+    width: 100%;
 }
 
 .texto-apresentacao h1{
@@ -132,7 +134,7 @@ header .item-list {
 #servicos h2{
     color: #fff;
     font-size: 32px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .service-list{
@@ -175,12 +177,18 @@ header .item-list {
 #planos{
     flex-direction: column;
     min-height: 100vh;
+    padding-top: 50px;
+}
+
+#planos h2{
+    font-size: 32px;
 }
 
 .plan-list{
     display: flex;
     /* Faz com que alinhei de baixo pra cima, fazendo esse efeito de escada */
     align-items: flex-end;
+    justify-content: space-between;
 }
 
 .plan-item{
@@ -188,6 +196,7 @@ header .item-list {
     border: 5px solid var(--destaque);
     margin-right: 20px;
     padding: 10px;
+    max-width: 240px;
 }
 
 .plan-item .btn{
@@ -200,6 +209,7 @@ header .item-list {
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin-top: 20px;
 }
 
 .plan-item h3::after{
@@ -215,4 +225,78 @@ header .item-list {
     padding: 10px 20px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.plan-item ul li{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.plan-item ul li::before{
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: var(--destaque);
+    margin-right: 5px;
+
+}
+
+footer{
+    background-color: var(--destaque);
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.footer{
+    justify-content: space-between;
+    color: white;
+}
+
+/* mobile */
+@media(max-width: 992px){
+    .flex-container{
+        flex-direction: column;
+    }
+
+    .apresentacao{
+        flex-direction: column-reverse;
+    }
+
+    .apresentacao .texto-apresentacao{
+        width: 100%;
+    }
+
+    #quem-somos{
+        flex-direction: column-reverse;
+    }
+
+    #quem-somos img{
+        min-width: 320px;
+        margin: auto;
+    }
+
+    .service-list{
+        flex-direction: column;
+    }
+
+    .service-item img{
+        width: 50%;
+        margin: auto;
+    }
+
+    .plan-list{
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+
+    .plan-list .plan-item{
+        max-width: 90%;
+        margin: auto;
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
