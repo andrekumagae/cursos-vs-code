@@ -50,12 +50,41 @@ Quando atribuimos um elemento por id, temos que informar que está vindo de um H
 let input1 = document.getElementById('input1') as HTMLInputElement;
 ```
 
-A tipagem em parâmetros de função é ao contrário do que normalmente usamos em outras linguagens:
+A tipagem em parâmetros de função é ao contrário do que normalmente usamos em outras linguagens. O retorno dela é declarado depois de fechar os parênteses:
 
 ```
 function adicionarNumero(
    numero1: number, 
    numero2: number, 
    devePrintar: boolean, 
-   frase: string)
+   frase: string): number{}
+```
+## Callback
+
+Podemos inserir funções como parâmetreos dentro de funções. Perceba no trecho abaixo:´
+
+```
+function somarValoresETratar(numero1: number, numero2: number, callback: (numero3: number) => number): number {
+    let resultado = numero1 + numero2;
+    return callback(resultado);
+}
+```
+
+O terceiro parâmetro callback pode ser uma função qualquer, que recebe um número e retorna outro número. Usamos como exemplo as duas funções abaixo:
+
+```
+function aoQuadrado(numero: number): number {
+    return numero * numero;
+}
+
+function dividirPorEleMesmo(numero: number): number {
+    return numero / numero;
+}
+```
+
+E mostramos no log chamando a 1ª função criada:
+
+```
+console.log(somarValoresETratar(1,3, aoQuadrado));
+console.log(somarValoresETratar(1,3, dividirPorEleMesmo));
 ```
