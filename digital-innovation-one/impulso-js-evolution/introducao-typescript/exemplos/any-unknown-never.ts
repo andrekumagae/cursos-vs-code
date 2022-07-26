@@ -1,19 +1,23 @@
-"use strict";
-let valorAny;
+let valorAny : any;
 valorAny = 'teste';
 valorAny = 1;
-let valorUnknown;
+
+let valorUnknown : unknown;
 valorUnknown = 'teste';
 valorUnknown = 1;
-let texto;
+
+let texto : string;
 texto = valorAny;
 /* Não funciona
 texto = valorUnknown; */
+
 /* Funciona */
 if (typeof valorUnknown === 'string') {
     texto = valorUnknown;
 }
-function jogaErro(erro, codigo) {
-    throw { error: erro, code: codigo };
+
+function jogaErro(erro: string, codigo: number): never {
+    throw {error: erro, code: codigo}
 }
+
 jogaErro('deu erro', 500);

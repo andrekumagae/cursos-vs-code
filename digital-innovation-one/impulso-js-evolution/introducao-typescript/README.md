@@ -88,3 +88,49 @@ E mostramos no log chamando a 1ª função criada:
 console.log(somarValoresETratar(1,3, aoQuadrado));
 console.log(somarValoresETratar(1,3, dividirPorEleMesmo));
 ```
+
+## Diferença entre tipo any e unknown
+
+Os tipos any e unkwnown podem receber qualquer outro tipo:
+
+```
+let valorAny : any;
+valorAny = 'teste';
+valorAny = 1;
+
+let valorUnknown : unknown;
+valorUnknown = 'teste';
+valorUnknown = 1;
+```
+
+Porém, o tipo unknown só pode atribuir seu valor a otroutra variável através de uma asserção (teste):
+
+```
+let texto : string;
+texto = valorAny;
+/* Não funciona
+texto = valorUnknown; */
+
+/* Funciona */
+if (typeof valorUnknown === 'string') {
+    texto = valorUnknown;
+}
+```
+
+## Tipo never
+
+Usamos o retorno never quando pensamos em uma situação que não ocorra, como por exemplo um erro.
+
+```
+function jogaErro(erro: string, codigo: number): never {
+    throw {error: erro, code: codigo}
+}
+
+jogaErro('deu erro', 500);
+```
+
+## Propriedades do arquivo tsconfig.json
+
+### target
+
+Usado para configurar para qual versão do ECMA Script rodará o seu código. Importante para que tenha compatibilidade com navegadores desatualizados.
